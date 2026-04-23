@@ -8618,6 +8618,376 @@ body.accessibility-widget-visible ._access-menu {
     display: none !important;
   }
 }
+
+/* Added Component Styles */
+/* =============================================
+   TESTIMONIALS SECTION — מוסכי השרון כ"ס
+   ============================================= */
+
+.tst-testimonials {
+  background: #0a0e1a;
+  padding: 90px 20px;
+  font-family: system-ui, sans-serif;
+  direction: rtl;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle background glow */
+.tst-testimonials::before {
+  content: '';
+  position: absolute;
+  top: -120px;
+  right: -120px;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(0, 212, 255, 0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.tst-testimonials::after {
+  content: '';
+  position: absolute;
+  bottom: -100px;
+  left: -100px;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(214, 245, 26, 0.06) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* Container */
+.tst-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+/* Header */
+.tst-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.tst-badge {
+  display: inline-block;
+  background: linear-gradient(90deg, rgba(0, 212, 255, 0.15), rgba(214, 245, 26, 0.15));
+  border: 1px solid rgba(0, 212, 255, 0.4);
+  color: var(--primary, #00D4FF);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  padding: 6px 18px;
+  border-radius: 50px;
+  margin-bottom: 18px;
+  text-transform: uppercase;
+}
+
+.tst-title {
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0 0 16px 0;
+  line-height: 1.25;
+}
+
+.tst-subtitle {
+  font-size: 1.05rem;
+  color: rgba(255, 255, 255, 0.6);
+  max-width: 520px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* Grid */
+.tst-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-bottom: 56px;
+}
+
+/* Card Base */
+.tst-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(0, 212, 255, 0.18);
+  border-radius: 18px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease, background 0.3s ease;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.tst-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, rgba(0, 212, 255, 0.4), transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.tst-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4), 0 0 20px rgba(0, 212, 255, 0.08);
+  border-color: rgba(0, 212, 255, 0.4);
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.tst-card:hover::before {
+  opacity: 1;
+}
+
+/* Featured Card */
+.tst-card--featured {
+  background: linear-gradient(135deg, rgba(0, 212, 255, 0.1) 0%, rgba(214, 245, 26, 0.06) 100%);
+  border-color: rgba(0, 212, 255, 0.4);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35), 0 0 30px rgba(0, 212, 255, 0.1);
+}
+
+.tst-card--featured::before {
+  opacity: 1;
+  background: linear-gradient(90deg, #D6F51A, #00D4FF, #D6F51A);
+}
+
+/* Card Top Row */
+.tst-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Stars */
+.tst-stars {
+  font-size: 1.2rem;
+  color: #FFD700;
+  letter-spacing: 2px;
+  line-height: 1;
+}
+
+/* Quote Icon */
+.tst-quote-icon {
+  font-size: 4rem;
+  line-height: 0.6;
+  color: var(--primary, #00D4FF);
+  opacity: 0.3;
+  font-family: Georgia, serif;
+  font-weight: 900;
+  margin-top: 10px;
+}
+
+/* Review Text */
+.tst-review-text {
+  font-size: 0.97rem;
+  color: rgba(255, 255, 255, 0.82);
+  line-height: 1.8;
+  margin: 0;
+  padding: 0;
+  flex: 1;
+  border-right: 3px solid rgba(0, 212, 255, 0.5);
+  padding-right: 16px;
+}
+
+/* Customer Info */
+.tst-customer {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Photo Wrapper */
+.tst-photo-wrap {
+  flex-shrink: 0;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid rgba(0, 212, 255, 0.4);
+  box-shadow: 0 0 12px rgba(0, 212, 255, 0.2);
+}
+
+.tst-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Name & Company */
+.tst-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.tst-name {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #ffffff;
+  display: block;
+}
+
+.tst-company {
+  font-size: 0.82rem;
+  color: var(--primary, #00D4FF);
+  opacity: 0.85;
+  display: block;
+}
+
+/* Stats Bar */
+.tst-stats {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(0, 212, 255, 0.2);
+  border-radius: 16px;
+  padding: 32px 40px;
+  flex-wrap: wrap;
+}
+
+.tst-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 0 48px;
+  flex: 1;
+  min-width: 140px;
+}
+
+.tst-stat-number {
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  font-weight: 900;
+  background: var(--gradient-primary, linear-gradient(90deg, #D6F51A 0%, #C8F211 100%));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1;
+}
+
+.tst-stat-label {
+  font-size: 0.88rem;
+  color: rgba(255, 255, 255, 0.55);
+  font-weight: 500;
+  text-align: center;
+}
+
+.tst-stat-divider {
+  width: 1px;
+  height: 50px;
+  background: rgba(0, 212, 255, 0.2);
+  flex-shrink: 0;
+}
+
+/* =============================================
+   RESPONSIVE — TABLET
+   ============================================= */
+@media (max-width: 900px) {
+  .tst-testimonials {
+    padding: 70px 16px;
+  }
+
+  .tst-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .tst-stats {
+    padding: 28px 24px;
+    gap: 8px;
+  }
+
+  .tst-stat {
+    padding: 12px 24px;
+  }
+
+  .tst-stat-divider {
+    display: none;
+  }
+
+  .tst-stats {
+    gap: 0;
+  }
+}
+
+/* =============================================
+   RESPONSIVE — MOBILE
+   ============================================= */
+@media (max-width: 600px) {
+  .tst-testimonials {
+    padding: 56px 14px;
+  }
+
+  .tst-header {
+    margin-bottom: 40px;
+  }
+
+  .tst-card {
+    padding: 24px 20px;
+    gap: 16px;
+  }
+
+  .tst-review-text {
+    font-size: 0.93rem;
+  }
+
+  .tst-stats {
+    flex-direction: column;
+    padding: 24px 20px;
+    gap: 20px;
+  }
+
+  .tst-stat {
+    padding: 0;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 16px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  }
+
+  .tst-stat:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  .tst-stat-number {
+    font-size: 1.6rem;
+  }
+
+  .tst-stat-label {
+    font-size: 0.85rem;
+    text-align: left;
+  }
+
+  .tst-photo-wrap {
+    width: 48px;
+    height: 48px;
+  }
+
+  .tst-quote-icon {
+    font-size: 3rem;
+  }
+}
+
+/* Focus states for accessibility */
+.tst-card:focus-within {
+  outline: 2px solid var(--primary, #00D4FF);
+  outline-offset: 3px;
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
